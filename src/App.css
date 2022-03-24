@@ -20,3 +20,7 @@ ul {
   justify-content: center;
   color: white;
 }
+a {
+  color: darkred;
+  text-decoration: none;
+}
