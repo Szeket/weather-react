@@ -1,16 +1,28 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  padding: 25px;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 600;
+  padding: 25px;
+}
+ul {
+  list-style: none;
+  text-align: center;
+}
+
+form {
+  width: 110%;
+  text-size-adjust: 120px;
 }
 
 .App-header {
