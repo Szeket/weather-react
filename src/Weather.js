@@ -35,9 +35,18 @@ export default function Weather() {
   return (
     <div className="form">
       <h3>{updateCity}</h3>
-      <form classNabe="mb-3" onSubmit={Submit}>
-        <input type="search" onChange={updateCity} className="form-control" />
-        <input type="submit" value="search" className="btn btn-primary w-100" />
+      <form className="mt-3" onSubmit={Submit}>
+        <input
+          type="search"
+          placeholder="Type a city"
+          onChange={updateCity}
+          className="form-control"
+        />
+        <input
+          type="submit"
+          value="Search"
+          className="btn btn-danger w-100 mt-3"
+        />
       </form>
       <h3>{message}</h3>
     </div>
