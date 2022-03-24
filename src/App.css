@@ -11,6 +11,10 @@ ul {
   list-style: none;
   text-align: center;
 }
+a {
+  color: #bb2d3b !important;
+  text-decoration: none !important;
+}
 
 .App-header {
   min-height: 100vh;
@@ -19,8 +23,4 @@ ul {
   align-items: center;
   justify-content: center;
   color: white;
-}
-a {
-  color: darkred;
-  text-decoration: none;
 }
