@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <div className="container">
         <header className="App-header">
-          <Weather />
+          <Weather defaultCity="Warsaw" />
           <footer>
             Coded by
             <a href="https://github.com/Szeket/weather-react"> Szeket</a>
