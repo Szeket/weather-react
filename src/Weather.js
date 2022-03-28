@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 export default function Weather() {
   return (
-    <div className="Weather">
+    <div className="Weather shadow rounded">
       <form>
         <div className="row">
           <div className="col-sm-9">
