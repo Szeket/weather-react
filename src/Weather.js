@@ -1,54 +1,44 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./Weather.css";
+import "bootstrap/dist/css/bootstrap.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCloud } from "@fortawesome/free-solid-svg-icons";
 
 export default function Weather() {
-  let [city, setCity] = useState(null);
-  let [message, setMessage] = useState(null);
-
-  function Submit(event) {
-    event.preventDefault();
-    let apiKey = "0517d60033ca170380a3d6540e3a62e0";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(url).then(showTemperature);
-  }
-
-  function updateCity(event) {
-    setCity(event.target.value);
-  }
-
-  function showTemperature(response) {
-    setMessage(
-      <ul>
-        <li>Temperature: {Math.round(response.data.main.temp)}°C</li>
-        <li>{response.data.weather[0].description}</li>
-        <li>Humidity: {Math.round(response.data.main.humidity)}%</li>
-        <li>Wind: {Math.round(response.data.wind.speed)}km/h</li>
-        <li>
-          <img
-            src={`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`}
-            alt="icon"
-          />
-        </li>
-      </ul>
-    );
-  }
   return (
-    <div className="form">
-      <h3>{updateCity}</h3>
-      <form className="mt-3" onSubmit={Submit}>
-        <input
-          type="search"
-          placeholder="Type a city"
-          onChange={updateCity}
-          className="form-control"
-        />
-        <input
-          type="submit"
-          value="Search"
-          className="btn btn-danger w-100 mt-3"
-        />
+    <div className="Weather">
+      <form>
+        <div className="row">
+          <div className="col-9">
+            <input
+              type="search"
+              placeholder="type a city"
+              className="form-control"
+            />
+          </div>
+          <div className="col-3">
+            <input type="submit" value="search" className="btn btn-danger" />
+          </div>
+        </div>
       </form>
-      <h3>{message}</h3>
+      <h1>Warsaw</h1>
+      <ul>
+        <li>Wednesday 07:00</li>
+        <li>Partly cloudy</li>
+      </ul>
+      <div className="row">
+        <div className="col-6">
+          <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"></img>
+          10C
+        </div>
+        <div className="col-6">
+          <ul>
+            <li>Humidity:12%</li>
+            <li>Wind: 17km/h</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
