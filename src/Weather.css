@@ -4,7 +4,7 @@
   border: 1px solid #999999;
   border-radius: 7px;
   max-width: 70%;
-  margin: 10px auto;
+  margin: 30px auto;
   padding: 25px;
 }
 
@@ -24,6 +24,19 @@
 }
 
 .Weather .currentTemp {
-  font-size: 39px;
+  font-size: 46px;
   font-weight: bold;
+  margin-left: 2px;
+}
+
+.Weather img {
+  float: left;
+  position: relative;
+  top: 4px;
+}
+.Weather .unit {
+  display: inline;
+  margin-left: 2px;
+  position: relative;
+  top: -22px;
 }
