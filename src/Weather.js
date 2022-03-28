@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCloud } from "@fortawesome/free-solid-svg-icons";
 
 export default function Weather() {
   return (
