@@ -26,14 +26,14 @@
 .Weather .currentTemp {
   font-size: 46px;
   font-weight: bold;
-  margin-left: 2px;
+  margin-left: 5px;
 }
 
-.Weather img {
+.Weather canvas {
   float: left;
   position: relative;
-  top: -15px;
-  height: 120px;
+  top: -5px;
+  height: 70px;
 }
 .Weather .unit {
   display: inline;
