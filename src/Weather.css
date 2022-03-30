@@ -32,7 +32,8 @@
 .Weather img {
   float: left;
   position: relative;
-  top: 4px;
+  top: -15px;
+  height: 120px;
 }
 .Weather .unit {
   display: inline;
