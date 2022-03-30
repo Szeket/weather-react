@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
+import ReactAnimatedWeather from "react-animated-weather";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -72,6 +73,15 @@ export default function Weather(props) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
-    return "Loading...";
+    return (
+      <div className="position-absolute top-50 start-50 translate-middle">
+        <ReactAnimatedWeather
+          icon="SLEET"
+          color="black"
+          size={150}
+          animate={true}
+        />
+      </div>
+    );
   }
 }
