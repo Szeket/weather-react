@@ -9,7 +9,14 @@ function App() {
           <Weather defaultCity="Warsaw" />
           <footer>
             Coded by
-            <a href="https://github.com/Szeket/weather-react"> Szeket</a>
+            <a
+              href="https://github.com/Szeket/weather-react"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              Szeket
+            </a>
           </footer>
         </header>
       </div>

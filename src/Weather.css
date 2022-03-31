@@ -40,3 +40,14 @@
   position: relative;
   top: -22px;
 }
+@media (max-width: 280px) {
+  .Weather {
+    text-align: center !important;
+  }
+}
+@media (max-width: 770px) {
+  btn {
+    display: block;
+    margin-top: 2px;
+  }
+}
