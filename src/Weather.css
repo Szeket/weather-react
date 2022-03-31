@@ -29,11 +29,10 @@
   margin-left: 5px;
 }
 
-.Weather canvas {
+.Weather .icon {
   float: left;
   position: relative;
   top: -5px;
-  height: 70px;
 }
 .Weather .unit {
   display: inline;
