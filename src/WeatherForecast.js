@@ -1,32 +1,30 @@
 import React, { useState } from "react";
-import axios from "axios";
 import "./WeatherForecast.css";
-import WeatherIcon from "./WeatherIcon";
+import axios from "axios";
+import WeatherForecastDay from "./WeatherForecastDay";
 
 export default function WeatherForecast(props) {
-  let [loaded, setLoaded] = useState("false");
-  let [forecast, setForecast] = useState("null");
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
 
   function handleResponse(response) {
     setForecast(response.data.daily);
-    setLoaded("true");
-    console.log(response.data.daily);
+    setLoaded(true);
   }
   if (loaded) {
     return (
       <div className="WeatherForecast">
         <hr className="bg-warning border-3 border-top border-warning" />
         <div className="row">
-          <div className="col">
-            <div className="forecast-day">Thu</div>
-            <WeatherIcon code="01n" size={46} />
-            <div className="temperatures">
-              <span className="temperature-max">
-                <strong>{forecast[0].temp_max}</strong>{" "}
-              </span>{" "}
-              |<span className="temperature-min">{forecast[0].temp_min} </span>
-            </div>
-          </div>
+          {forecast.map(function (forecastDaily, index) {
+            if (index < 6) {
+              return (
+                <div className="col" key={index}>
+                  <WeatherForecastDay data={forecastDaily} />
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     );
